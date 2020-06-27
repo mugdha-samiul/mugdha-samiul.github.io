@@ -1,4 +1,4 @@
-# Welcome to Mehraj's Notes
+# Welcome to Mugdha's Notes
 
 Here you can see my notes on differnt topics and hope you can be benifited from that.
 
@@ -10,4 +10,4 @@ Here you can see my notes on differnt topics and hope you can be benifited from 
 - [Hand Cricket Game in C++](https://github.com/codermehraj/HAND-CRICK-2-cpp)
 - [Some STL codes in C++](https://github.com/codermehraj/STL-in-CPP)
 
-You can reach me at codermehraj@gmail.com
+You can reach me at smugdha78@gmail.com
