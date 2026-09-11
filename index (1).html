@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samiul Islam Mugdha</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FBF4E4;
+    --cream-deep: #F1E6CC;
+    --ink: #2A2116;
+    --ink-soft: #6E624C;
+    --line: #DCC9A0;
+    --accent: #7C6A3E;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+  }
+
+  a:hover, a:focus-visible {
+    border-bottom-color: var(--accent);
+  }
+
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  .wrap {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 5rem 1.5rem 7rem;
+  }
+
+  /* ---------- Header ---------- */
+
+  header {
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .header-text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .avatar {
+    width: 108px;
+    height: 108px;
+    border-radius: 4px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid var(--line);
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: clamp(2.3rem, 6vw, 3.1rem);
+    line-height: 1.08;
+    margin: 0 0 0.6rem;
+    letter-spacing: -0.01em;
+  }
+
+  .role {
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+    margin: 0 0 1.6rem;
+    max-width: 42ch;
+  }
+
+  .role .inst {
+    color: var(--ink);
+  }
+
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1rem;
+    font-size: 0.92rem;
+  }
+
+  .contact a {
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* ---------- Sections ---------- */
+
+  section {
+    margin-bottom: 3.6rem;
+  }
+
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 0 0 0.4rem;
+  }
+
+  .section-rule {
+    height: 1px;
+    background: var(--line);
+    border: none;
+    margin: 0 0 1.8rem;
+  }
+
+  h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.82rem;
+    letter-spacing: 0.02em;
+    color: var(--ink-soft);
+    margin: 0 0 1rem;
+  }
+
+  /* ---------- Entries ---------- */
+
+  .entry {
+    margin-bottom: 1.7rem;
+  }
+
+  .entry:last-child {
+    margin-bottom: 0;
+  }
+
+  .entry-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .entry-title {
+    font-weight: 600;
+    font-size: 1.02rem;
+  }
+
+  .entry-org {
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    margin-top: 0.1rem;
+  }
+
+  .entry-date {
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    white-space: nowrap;
+  }
+
+  .entry ul {
+    margin: 0.6rem 0 0;
+    padding-left: 1.15rem;
+  }
+
+  .entry li {
+    margin-bottom: 0.35rem;
+    font-size: 0.96rem;
+  }
+
+  .entry li:last-child {
+    margin-bottom: 0;
+  }
+
+  .subgroup {
+    margin-bottom: 1.9rem;
+  }
+
+  .subgroup:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ---------- Publications ---------- */
+
+  .pub {
+    margin-bottom: 1.9rem;
+    padding-bottom: 1.9rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .pub:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .pub-title {
+    font-weight: 600;
+    font-size: 1.02rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .pub-venue {
+    font-size: 0.9rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .pub-authors {
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    margin-bottom: 0.5rem;
+  }
+
+  .pub-desc {
+    font-size: 0.96rem;
+  }
+
+  footer {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    padding-top: 2rem;
+    border-top: 1px solid var(--line);
+  }
+
+  @media (max-width: 480px) {
+    .wrap { padding: 3rem 1.25rem 5rem; }
+    .entry-head { flex-direction: column; align-items: flex-start; gap: 0.2rem; }
+    header { flex-direction: column-reverse; gap: 1.25rem; }
+    .avatar { width: 84px; height: 84px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="header-text">
+      <h1>Samiul Islam Mugdha</h1>
+      <p class="role">Lecturer, Department of Software Engineering, <span class="inst">Daffodil International University</span>. Working on AI for software engineering, LLM-based test generation, and trustworthy AI evaluation.</p>
+      <div class="contact">
+        <a href="mailto:mugdhasamiul@gmail.com">mugdhasamiul@gmail.com</a>
+        <a href="#" title="Add your GitHub URL">GitHub</a>
+        <a href="#" title="Add your LinkedIn URL">LinkedIn</a>
+        <span>+880 1962-353752</span>
+      </div>
+    </div>
+    <img class="avatar" src="assets/photo.jpg" alt="Samiul Islam Mugdha">
+  </header>
+
+  <section id="education">
+    <h2>Education</h2>
+    <hr class="section-rule">
+    <div class="entry">
+      <div class="entry-head">
+        <div>
+          <div class="entry-title">Bachelor of Science in Software Engineering</div>
+          <div class="entry-org">Shahjalal University of Science and Technology, Sylhet, Bangladesh</div>
+        </div>
+        <div class="entry-date">Feb 2020 – Jul 2025</div>
+      </div>
+      <ul>
+        <li>CGPA: 3.84/4.00 (final two-semester GPA: 3.96/4.00)</li>
+        <li>GRE: 312 total — Quantitative 170, Analytical Writing 3.5</li>
+        <li>IELTS: Overall 7.5 — Listening 7.5, Reading 8.5, Writing 7.0, Speaking 6.5</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <hr class="section-rule">
+
+    <div class="subgroup">
+      <h3>Professional</h3>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div>
+            <div class="entry-title">Lecturer, Department of Software Engineering</div>
+            <div class="entry-org">Daffodil International University, Dhaka</div>
+          </div>
+          <div class="entry-date">Sep 2025 – Present</div>
+        </div>
+        <ul>
+          <li>Teach Software Quality Assurance and Testing, its lab component, and Software Architecture</li>
+          <li>Contributed to the departmental committee developing the Software Quality Assurance specialization and designed the "Agile Testing" course</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div>
+            <div class="entry-title">Junior Software Engineer Intern</div>
+            <div class="entry-org">Dynamic Solution Innovators Ltd, Dhaka</div>
+          </div>
+          <div class="entry-date">Nov 2024 – May 2025</div>
+        </div>
+        <ul>
+          <li>Developed and tested responsive frontend components using React, Next.js, TypeScript, Tailwind CSS, Bootstrap, and Postman</li>
+          <li>Collaborated through Git-based version control and code integration across projects</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="subgroup">
+      <h3>Research</h3>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div>
+            <div class="entry-title">Research Assistant (Remote), supervised by Prof. Yuhong Yan</div>
+            <div class="entry-org">Concordia University, Montreal, Canada</div>
+          </div>
+          <div class="entry-date">May 2026 – Present</div>
+        </div>
+        <ul>
+          <li>Research trustworthy LLM-assisted venture screening and financial decision support</li>
+          <li>Contribute to literature-driven prompt design and an evidence-grounded pipeline for mixed-format venture proposals</li>
+          <li>Develop evaluation frameworks measuring expert alignment, evidence grounding, calibration, reliability, and robustness</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div>
+            <div class="entry-title">Research Mentor, Department of Software Engineering</div>
+            <div class="entry-org">Shahjalal University of Science and Technology, Sylhet</div>
+          </div>
+          <div class="entry-date">May 2026 – Present</div>
+        </div>
+        <ul>
+          <li>Mentor three undergraduate research groups on LLM-based software testing, Bangla bias detection, and low-resource tokenization</li>
+          <li>Guide research-question formulation, literature review, framework design, experimental planning, implementation, and manuscript development</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div>
+            <div class="entry-title">Undergraduate Thesis Researcher</div>
+            <div class="entry-org">Shahjalal University of Science and Technology, Sylhet</div>
+          </div>
+          <div class="entry-date">2024 – 2025</div>
+        </div>
+        <ul>
+          <li>Co-developed a Bangla textbook inclusiveness benchmark of 3,877 sentences across 338 context-preserving paragraphs, annotated by 40 participants</li>
+          <li>Evaluated GPT-4o, Gemini-1.5-Flash, and Mistral Large 2.1 across three prompting strategies; GPT-4o with chain-of-thought reached 0.763 accuracy and 0.787 F1</li>
+          <li>Co-led dataset construction, experimentation, and manuscript preparation</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div>
+            <div class="entry-title">Undergraduate Thesis Supervisor</div>
+            <div class="entry-org">Daffodil International University, Dhaka</div>
+          </div>
+          <div class="entry-date">Aug 2026 – Present</div>
+        </div>
+        <ul>
+          <li>Supervising an undergraduate thesis in the Department of Software Engineering</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <hr class="section-rule">
+
+    <div class="pub">
+      <div class="pub-title">Inclusiveness Detection in Bangla Textbooks: Exploring LLMs and Advanced Prompting Techniques</div>
+      <div class="pub-venue">Accepted &amp; Published — IEEE Rev-AI 2026</div>
+      <div class="pub-authors">Ridwanur Rashid Siam*, Samiul Islam Mugdha*, Md Kamruzzaman Kamrul, Abdus Salam Azad, Sayma Sultana Chowdhury. *Equal contribution.</div>
+      <div class="pub-desc">Developed the BanglaEduInclusive benchmark and evaluated GPT-4o, Gemini-1.5-Flash, and Mistral Large 2.1 for inclusiveness detection using advanced prompting techniques. Co-led the literature review, dataset construction, annotation, LLM experiments, result analysis, and manuscript preparation.</div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Clus-Test: A Cluster-Aware Multi-Layer Pipeline for Cost-Aware LLM-Based Python Unit Test Generation Using Mutation Testing</div>
+      <div class="pub-venue">Under Review — ICCIT 2026</div>
+      <div class="pub-authors">Author list omitted to preserve double-blind review.</div>
+      <div class="pub-desc">Proposed a cluster-aware pipeline for cost-efficient LLM-generated Python unit tests, evaluated through mutation testing. Cuts per-task cost by 67% on average while matching the mutation score of a full-budget iterative baseline.</div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Trustworthy Evaluation of LLM-Assisted Venture Screening</div>
+      <div class="pub-venue">Under Review — ACM ICAIF 2026</div>
+      <div class="pub-authors">Author list omitted to preserve double-blind review.</div>
+      <div class="pub-desc">Developed and evaluated an evidence-grounded LLM pipeline for venture screening, auditing expert alignment, evidence grounding, calibration, and robustness. Contributed to the literature review, prompt engineering, experimental design, evaluation, and manuscript revision.</div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Test Smell Detection: A Comparison Between LLMs and Prevalent C# Smell Detection Tools</div>
+      <div class="pub-venue">Ongoing Research</div>
+      <div class="pub-desc">Proposing an LLM-based test smell detection approach for C# projects, comparing its effectiveness against existing static analysis tools to improve test quality and maintainability.</div>
+    </div>
+  </section>
+
+  <footer>
+    Last updated September 2026.
+  </footer>
+
+</div>
+</body>
+</html>
