@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FlickeringGrid } from "@/components/magicui/flickering-grid";
+import { FlickeringGrid } from "@/components/motion/flickering-grid";
 import { DATA } from "@/data/resume";
 
 export default function ContactSection() {
@@ -24,20 +24,22 @@ export default function ContactSection() {
           Get in Touch
         </h2>
         <p className="mx-auto max-w-lg text-muted-foreground text-balance">
-          Want to chat? Just shoot me a dm{" "}
+          Feel free to reach out about research, teaching, or collaboration.
+          Email me at{" "}
           <Link
-            href={DATA.contact.social.X.url}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={`mailto:${DATA.contact.email}`}
             className="text-blue-500 hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
           >
-            with a direct question on twitter
+            {DATA.contact.email}
           </Link>{" "}
-          and I&apos;ll respond whenever I can. I will ignore all
-          soliciting.
+          and I will respond whenever I can.
+        </p>
+        <p className="mx-auto max-w-lg text-sm text-muted-foreground text-balance">
+          {DATA.contact.affiliation}
+          <br />
+          {DATA.contact.tel}
         </p>
       </div>
     </div>
   );
 }
-
