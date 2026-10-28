@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { FlickeringGrid } from "@/components/magicui/flickering-grid";
+import { FlickeringGrid } from "@/components/motion/flickering-grid";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -27,6 +27,15 @@ export const metadata: Metadata = {
     template: `%s | ${DATA.name}`,
   },
   description: DATA.description,
+  authors: [{ name: DATA.name, url: DATA.url }],
+  keywords: [
+    "AI for Software Engineering",
+    "LLM-based software testing",
+    "mutation testing",
+    "trustworthy AI",
+    "LLM evaluation",
+    "software quality assurance",
+  ],
   openGraph: {
     title: `${DATA.name}`,
     description: DATA.description,
@@ -49,10 +58,6 @@ export const metadata: Metadata = {
   twitter: {
     title: `${DATA.name}`,
     card: "summary_large_image",
-  },
-  verification: {
-    google: "",
-    yandex: "",
   },
 };
 
