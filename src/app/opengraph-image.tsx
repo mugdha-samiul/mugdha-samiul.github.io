@@ -1,8 +1,10 @@
  
 import { ImageResponse } from "next/og";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { DATA } from "@/data/resume";
 
-export const runtime = "edge";
+export const dynamic = "force-static";
 
 export const alt = DATA.name;
 export const size = {
@@ -11,20 +13,29 @@ export const size = {
 };
 export const contentType = "image/png";
 
+const publicFile = (...parts: string[]) => join(process.cwd(), "public", ...parts);
+
 const getFontData = async () => {
     try {
         const [cabinetGrotesk, clashDisplay] = await Promise.all([
-            fetch(
-                new URL("../../public/fonts/CabinetGrotesk-Medium.ttf", import.meta.url)
-            ).then((res) => res.arrayBuffer()),
-            fetch(
-                new URL("../../public/fonts/ClashDisplay-Semibold.ttf", import.meta.url)
-            ).then((res) => res.arrayBuffer()),
+            readFile(publicFile("fonts", "CabinetGrotesk-Medium.ttf")),
+            readFile(publicFile("fonts", "ClashDisplay-Semibold.ttf")),
         ]);
         return { cabinetGrotesk, clashDisplay };
     } catch (error) {
         console.error("Failed to load fonts:", error);
         return null;
+    }
+};
+
+// The avatar is inlined as a data URI: a static export has no origin to fetch from.
+const getAvatarDataUri = async () => {
+    try {
+        const file = await readFile(publicFile(DATA.avatarUrl.replace(/^\//, "")));
+        return `data:image/jpeg;base64,${file.toString("base64")}`;
+    } catch (error) {
+        console.error("Failed to load avatar:", error);
+        return undefined;
     }
 };
 
@@ -107,10 +118,10 @@ const styles = {
 
 export default async function Image() {
     try {
-        const fontData = await getFontData();
-        const imageUrl = DATA.avatarUrl
-            ? new URL(DATA.avatarUrl, DATA.url).toString()
-            : undefined;
+        const [fontData, imageUrl] = await Promise.all([
+            getFontData(),
+            getAvatarDataUri(),
+        ]);
 
         return new ImageResponse(
             (
