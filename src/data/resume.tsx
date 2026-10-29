@@ -121,14 +121,14 @@ export const DATA = {
     },
     {
       title:
-        "Claus-Test-HumanEval: A Cluster-Aware Multi-Layer Pipeline for Cost-Aware LLM-Based Python Unit Test Generation Using Mutation Testing",
+        "Clus-Test: A Cluster-Aware Multi-Layer Framework for Cost-Efficient Mutation-Guided LLM Unit Test Generation",
       authors: "Author list omitted to preserve double-blind review.",
       venue: "ICCIT 2026",
       venueHref: "https://iccit.org.bd/2026/",
       status: "Under review",
       description:
-        "A cluster-aware pipeline for cost-efficient LLM-generated Python unit tests, evaluated through mutation testing. On EvoEval across four subsets it matches the full-budget baseline's mutation score (94.3% vs. 93.7%) while cutting per-task cost by 67% on average.",
-      tags: ["LLM Testing", "Mutation Testing", "Python", "Cost-Aware"],
+        "A cluster-aware multi-layer pipeline for Python unit test generation that treats mutation feedback as a compression problem, grouping surviving mutants and escalating only those left unresolved. On 182 EvoEval problems across four semantic-altering subsets it matches the baseline's mutation score (94.3% vs. 93.7%, Wilcoxon p = 0.21) while cutting per-task cost by 67% on average.",
+      tags: ["Mutation Testing", "LLM Test Generation", "Clustering", "EvoEval"],
       links: [],
     },
     {
@@ -197,7 +197,7 @@ export const DATA = {
       school: "Notre Dame College",
       href: "https://www.ndc.edu.bd/",
       degree: "Higher Secondary Certificate — GPA 5.00/5.00",
-      logoUrl: "",
+      logoUrl: "/ndc.png",
       start: "2017",
       end: "2019",
     },
