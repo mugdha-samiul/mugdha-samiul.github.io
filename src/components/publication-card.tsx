@@ -2,6 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { ArrowUpRight, FileText } from "lucide-react";
 import Link from "next/link";
+import Markdown from "react-markdown";
 
 interface Props {
   title: string;
@@ -89,9 +90,9 @@ export function PublicationCard({
       </div>
 
       <p className="text-xs text-muted-foreground leading-relaxed">{authors}</p>
-      <p className="text-xs text-muted-foreground leading-relaxed flex-1">
-        {description}
-      </p>
+      <div className="text-xs flex-1 prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
+        <Markdown>{description}</Markdown>
+      </div>
 
       {tags && tags.length > 0 && (
         <div className="flex flex-wrap gap-1">

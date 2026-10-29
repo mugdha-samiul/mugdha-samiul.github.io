@@ -21,10 +21,6 @@ export default function PublicationsSection() {
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
             Papers and preprints
           </h2>
-          <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed text-balance text-center">
-            Work on LLM-based software testing, LLM evaluation, and trustworthy
-            AI.
-          </p>
         </div>
       </div>
       <div className="grid grid-cols-1 gap-3 max-w-[800px] mx-auto w-full">

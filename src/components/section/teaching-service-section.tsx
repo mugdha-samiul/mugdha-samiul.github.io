@@ -30,13 +30,6 @@ export default function TeachingServiceSection() {
                 </span>
               </div>
             ))}
-            <ul className="list-disc pl-5 flex flex-col gap-1 pt-1">
-              {DATA.teaching.curriculum.map((item) => (
-                <li key={item} className="text-xs text-muted-foreground">
-                  {item}
-                </li>
-              ))}
-            </ul>
           </div>
         </BlurFade>
       </div>
