@@ -18,7 +18,7 @@ export const DATA = {
     "I am a Lecturer in the Department of Software Engineering at [Daffodil International University](https://daffodilvarsity.edu.bd/), Dhaka, and a remote Research Assistant at [Concordia University](https://www.concordia.ca/) supervised by [Dr. Yuhong Yan](https://users.encs.concordia.ca/~yuhong/). I received my B.Sc. in Software Engineering from [Shahjalal University of Science and Technology](https://www.sust.edu/) in 2025.\n\nMy work sits at the intersection of **AI for Software Engineering** and **Trustworthy AI**. I study LLM-based software testing and debugging, using program analysis and mutation testing to make AI-assisted testing more targeted and less wasteful, and I evaluate how reliably LLM systems align with expert judgment. I also work on low-resource NLP, building Bangla benchmarks and auditing how well LLMs judge low-resource text.\n\nI am currently applying for PhD positions.",
   avatarUrl: "/headshot.jpg",
   cvUrl:
-    "https://drive.google.com/file/d/1ogjmhiNxE4OzzcbjFsVQIjk8-CTtBQRT/view?usp=sharing",
+    "https://drive.google.com/file/d/1FHSuaV3Y5s50RcoMtM6wPAxNO3zvtFYL/view?usp=sharing",
   skills: [
     { name: "Python", icon: Python },
     { name: "C" },
