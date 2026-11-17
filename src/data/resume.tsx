@@ -32,9 +32,12 @@ export const DATA = {
     { name: "LLM APIs" },
     { name: "NumPy" },
     { name: "Pandas" },
+    { name: "Matplotlib" },
+    { name: "Jupyter Notebook" },
     { name: "Git / GitHub", icon: Icons.github },
     { name: "Linux" },
     { name: "Docker", icon: Docker },
+    { name: "REST APIs" },
     { name: "LaTeX" },
   ],
   navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
@@ -77,19 +80,14 @@ export const DATA = {
         "LLM-based software testing and debugging. I use program analysis and mutation testing to make LLM-generated test suites targeted and cost-aware instead of wasteful.",
     },
     {
+      title: "Software Testing and Debugging",
+      description:
+        "Mutation testing, test adequacy, and fault localization. I study how to measure whether a test suite genuinely exercises a program, and how to narrow down the code responsible when it fails.",
+    },
+    {
       title: "Trustworthy AI",
       description:
         "Auditing LLM systems on the axes that decide whether they can be relied on: expert alignment, evidence grounding, score calibration, ranking reliability, and robustness.",
-    },
-    {
-      title: "LLM Evaluation for Low-Resource Languages",
-      description:
-        "Benchmark construction and LLM-as-a-judge reliability for Bangla, measuring how closely model judgments track human annotation on text that is thinly represented in pretraining data.",
-    },
-    {
-      title: "Formal Verification",
-      description:
-        "Exploring formal verifiers as critics for LLM-generated code, where verifier errors are fed back to the model to repair its output.",
     },
   ],
 
@@ -163,31 +161,6 @@ export const DATA = {
       end: "Present",
       description:
         "Conduct research on trustworthy LLM-assisted venture screening and financial decision support. Contribute to literature-driven prompt design and an evidence-grounded pipeline for mixed-format venture proposals. Evaluate expert alignment, evidence grounding, score calibration, ranking reliability, and robustness.",
-    },
-    {
-      company: "Shahjalal University of Science and Technology",
-      href: "https://www.sust.edu/",
-      badges: [],
-      location: "Sylhet, Bangladesh",
-      title: "Research Mentor, Department of Software Engineering",
-      logoUrl: "/sust.png",
-      start: "Jun 2026",
-      end: "Present",
-      description:
-        "Mentoring multiple undergraduate research groups on projects including cost-efficient LLM test generation (Clus-Test, submitted to ICCIT 2026), bias detection in Bangla LLMs using counterexamples, AI-assisted formal verification, and low-resource tokenization for Bangla.",
-    },
-    {
-      company: "Shahjalal University of Science and Technology",
-      href: "https://www.sust.edu/",
-      badges: [],
-      location: "Sylhet, Bangladesh",
-      title:
-        "Research Assistant, BanglaEduInclusive Corpus Project (PI: Prof. Husne Ara Chowdhury)",
-      logoUrl: "/sust.png",
-      start: "Oct 2026",
-      end: "Sep 2027",
-      description:
-        "Building a large-scale dataset from Bangla educational content across multiple parameters of inclusiveness, extending the published Rev-AI 2026 paper. Supported by the SUST Research Center's Promotional Research Grant (2026–2027).",
     },
     {
       company: "Dynamic Solution Innovators Ltd",
