@@ -1,7 +1,5 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon } from "lucide-react";
-import { ReactLight } from "@/components/ui/svgs/reactLight";
-import { NextjsIconDark } from "@/components/ui/svgs/nextjsIconDark";
 import { Typescript } from "@/components/ui/svgs/typescript";
 import { Python } from "@/components/ui/svgs/python";
 import { Java } from "@/components/ui/svgs/java";
@@ -23,31 +21,21 @@ export const DATA = {
     "https://drive.google.com/file/d/1ogjmhiNxE4OzzcbjFsVQIjk8-CTtBQRT/view?usp=sharing",
   skills: [
     { name: "Python", icon: Python },
-    { name: "Typescript", icon: Typescript },
-    { name: "Java", icon: Java },
-    { name: "SQL", icon: Postgresql },
-    { name: "React", icon: ReactLight },
-    { name: "Next.js", icon: NextjsIconDark },
-    { name: "Tailwind CSS", icon: Icons.tailwindcss },
-    { name: "Docker", icon: Docker },
-    { name: "Git / GitHub", icon: Icons.github },
     { name: "C" },
     { name: "C++" },
+    { name: "Java", icon: Java },
     { name: "JavaScript" },
+    { name: "TypeScript", icon: Typescript },
+    { name: "SQL", icon: Postgresql },
     { name: "PyTorch" },
     { name: "Hugging Face Transformers" },
+    { name: "LLM APIs" },
     { name: "NumPy" },
     { name: "Pandas" },
-    { name: "Matplotlib" },
-    { name: "Jupyter Notebook" },
-    { name: "REST APIs" },
-    { name: "Postman" },
+    { name: "Git / GitHub", icon: Icons.github },
     { name: "Linux" },
+    { name: "Docker", icon: Docker },
     { name: "LaTeX" },
-    { name: "Mutation Testing" },
-    { name: "Program Analysis" },
-    { name: "LLM Evaluation" },
-    { name: "Prompt Design" },
   ],
   navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
   contact: {
@@ -98,6 +86,11 @@ export const DATA = {
       description:
         "Benchmark construction and LLM-as-a-judge reliability for Bangla, measuring how closely model judgments track human annotation on text that is thinly represented in pretraining data.",
     },
+    {
+      title: "Formal Verification",
+      description:
+        "Exploring formal verifiers as critics for LLM-generated code, where verifier errors are fed back to the model to repair its output.",
+    },
   ],
 
   publications: [
@@ -127,21 +120,21 @@ export const DATA = {
       venueHref: "https://iccit.org.bd/2026/",
       status: "Under review",
       description:
-        "A cluster-aware multi-layer pipeline for Python unit test generation that treats mutation feedback as a compression problem, grouping surviving mutants and escalating only those left unresolved. On 182 EvoEval problems across four semantic-altering subsets it matches the baseline's mutation score (94.3% vs. 93.7%, Wilcoxon p = 0.21) while cutting per-task cost by 67% on average.",
+        "A pipeline that generates unit tests with LLMs at lower cost. It starts with cheaper models and moves to more expensive ones, using clustering and a stopping rule that triggers when progress plateaus. On 182 EvoEval problems, it used 67% fewer tokens than the baseline with a similar mutation score (94.3% vs. 93.7%, Wilcoxon p = 0.21).",
       tags: ["Mutation Testing", "LLM Test Generation", "Clustering", "EvoEval"],
       links: [],
     },
     {
       title:
-        "Trustworthy LLM-Assisted Venture Screening: Auditing Expert Alignment, Evidence Grounding, and Cross-Domain Calibration",
+        "Trustworthy LLM-Assisted Venture Screening: Auditing, Diagnosing, and Improving Expert Alignment",
       authors: "Author list omitted to preserve double-blind review.",
       venue: "Structuring the Unstructured: AI in Private Markets @ ICAIF '26",
       venueHref:
         "https://ai-private-markets.github.io/ai-for-private-market-workshop/#about",
       status: "Accepted",
       description:
-        "An evidence-grounded LLM pipeline for venture screening, audited for expert alignment, evidence grounding, calibration, and robustness. Accepted at the AI in Private Markets workshop at ICAIF '26; being prepared for submission to [Canadian AI 2027](https://www.caiac.ca/en/conferences/canadianai-2027/home).",
-      tags: ["Trustworthy AI", "LLM Evaluation", "Calibration", "Robustness"],
+        "An evidence-grounded LLM pipeline for venture screening. We audited how closely it agrees with expert judgments, diagnosed where it falls short, and tested ways to improve that agreement. Accepted at the AI in Private Markets workshop at ICAIF '26; being prepared for submission to [Canadian AI 2027](https://www.caiac.ca/en/conferences/canadianai-2027/home).",
+      tags: ["Trustworthy AI", "LLM Evaluation", "Expert Alignment"],
       links: [],
     },
   ],
@@ -157,7 +150,7 @@ export const DATA = {
       start: "Sep 2025",
       end: "Present",
       description:
-        "Teach Software Quality Assurance and Testing, its lab component, and Software Architecture to 600+ students. Contributed to the departmental committee developing the Software Quality Assurance major and designed the \"Agile Testing\" course. Received training in AI Education, Outcome-Based Education (OBE), Bloom's Taxonomy, and Leadership.",
+        "Taught core software courses such as Software Quality Assurance and Testing, Software Testing Lab, and Software Architecture to 600+ students. Working with undergraduate students on research projects, including experiments and paper writing. Contributed to organizing the \"AI-Driven QA Boot-camp\" and \"AI-Augmented Software Testing\" workshop, both with 400+ attendees, and to the departmental committee building the curriculum for the Agile Testing course.",
     },
     {
       company: "Concordia University",
@@ -172,6 +165,31 @@ export const DATA = {
         "Conduct research on trustworthy LLM-assisted venture screening and financial decision support. Contribute to literature-driven prompt design and an evidence-grounded pipeline for mixed-format venture proposals. Evaluate expert alignment, evidence grounding, score calibration, ranking reliability, and robustness.",
     },
     {
+      company: "Shahjalal University of Science and Technology",
+      href: "https://www.sust.edu/",
+      badges: [],
+      location: "Sylhet, Bangladesh",
+      title: "Research Mentor, Department of Software Engineering",
+      logoUrl: "/sust.png",
+      start: "Jun 2026",
+      end: "Present",
+      description:
+        "Mentoring multiple undergraduate research groups on projects including cost-efficient LLM test generation (Clus-Test, submitted to ICCIT 2026), bias detection in Bangla LLMs using counterexamples, AI-assisted formal verification, and low-resource tokenization for Bangla.",
+    },
+    {
+      company: "Shahjalal University of Science and Technology",
+      href: "https://www.sust.edu/",
+      badges: [],
+      location: "Sylhet, Bangladesh",
+      title:
+        "Research Assistant, BanglaEduInclusive Corpus Project (PI: Prof. Husne Ara Chowdhury)",
+      logoUrl: "/sust.png",
+      start: "Oct 2026",
+      end: "Sep 2027",
+      description:
+        "Building a large-scale dataset from Bangla educational content across multiple parameters of inclusiveness, extending the published Rev-AI 2026 paper. Supported by the SUST Research Center's Promotional Research Grant (2026–2027).",
+    },
+    {
       company: "Dynamic Solution Innovators Ltd",
       href: "https://www.dsinnovators.com/",
       badges: [],
@@ -181,7 +199,7 @@ export const DATA = {
       start: "Nov 2024",
       end: "May 2025",
       description:
-        "Engineered responsive frontend features for production systems, including an online bidding platform and an internal HR management tool. Tested components and integrated APIs in an agile development team. Used React, Next.js, TypeScript, Tailwind CSS, Bootstrap, and Postman for development and testing.",
+        "Developed an online bidding system and an internal HR management tool. Built customized UI by extending shadcn/ui components, integrated with the backend team's APIs, and fixed frontend bugs. Used Next.js, TypeScript, Tailwind CSS, Bootstrap, Odoo, JavaScript, Docker, Postman, and Spring Boot across the projects.",
     },
   ],
   education: [
@@ -234,7 +252,7 @@ export const DATA = {
       institution: "Daffodil International University",
       dates: "December 2025",
       description:
-        "Contributed to developing the specialization and designed the \"Agile Testing\" course",
+        "Contributed to building the curriculum for the Agile Testing course",
     },
     {
       role: "Treasurer, Copernicus Astronomical Memorial",
