@@ -18,7 +18,7 @@ export const DATA = {
     "I am a Lecturer in the Department of Software Engineering at [Daffodil International University](https://daffodilvarsity.edu.bd/), Dhaka, and a remote Research Assistant at [Concordia University](https://www.concordia.ca/) supervised by [Dr. Yuhong Yan](https://users.encs.concordia.ca/~yuhong/). I received my B.Sc. in Software Engineering from [Shahjalal University of Science and Technology](https://www.sust.edu/) in 2025.\n\nMy work sits at the intersection of **AI for Software Engineering** and **Trustworthy AI**. I study LLM-based software testing and debugging, using program analysis and mutation testing to make AI-assisted testing more targeted and less wasteful, and I evaluate how reliably LLM systems align with expert judgment. I also work on low-resource NLP, building Bangla benchmarks and auditing how well LLMs judge low-resource text.\n\nI am currently applying for PhD positions.",
   avatarUrl: "/headshot.jpg",
   cvUrl:
-    "https://drive.google.com/file/d/1FHSuaV3Y5s50RcoMtM6wPAxNO3zvtFYL/view?usp=sharing",
+    "https://drive.google.com/file/d/1h7Bh2ZgJRchzQKItf1fZJtU1v3HLWsoj/view?usp=sharing",
   skills: [
     { name: "Python", icon: Python },
     { name: "C" },
@@ -112,18 +112,6 @@ export const DATA = {
     },
     {
       title:
-        "Clus-Test: A Cluster-Aware Multi-Layer Framework for Cost-Efficient Mutation-Guided LLM Unit Test Generation",
-      authors: "Author list omitted to preserve double-blind review.",
-      venue: "ICCIT 2026",
-      venueHref: "https://iccit.org.bd/2026/",
-      status: "Under review",
-      description:
-        "A pipeline that generates unit tests with LLMs at lower cost. It starts with cheaper models and moves to more expensive ones, using clustering and a stopping rule that triggers when progress plateaus. On 182 EvoEval problems, it used 67% fewer tokens than the baseline with a similar mutation score (94.3% vs. 93.7%, Wilcoxon p = 0.21).",
-      tags: ["Mutation Testing", "LLM Test Generation", "Clustering", "EvoEval"],
-      links: [],
-    },
-    {
-      title:
         "Trustworthy LLM-Assisted Venture Screening: Auditing, Diagnosing, and Improving Expert Alignment",
       authors: "Author list omitted to preserve double-blind review.",
       venue: "Structuring the Unstructured: AI in Private Markets @ ICAIF '26",
@@ -133,6 +121,15 @@ export const DATA = {
       description:
         "An evidence-grounded LLM pipeline for venture screening. We audited how closely it agrees with expert judgments, diagnosed where it falls short, and tested ways to improve that agreement. Accepted at the AI in Private Markets workshop at ICAIF '26; being prepared for submission to [Canadian AI 2027](https://www.caiac.ca/en/conferences/canadianai-2027/home).",
       tags: ["Trustworthy AI", "LLM Evaluation", "Expert Alignment"],
+      links: [],
+    },
+    {
+      title:
+        "Clus-Test: A Cluster-Aware Multi-Layer Framework for Cost-Efficient Mutation-Guided LLM Unit Test Generation",
+      status: "Manuscript in Preparation",
+      description:
+        "A pipeline that generates unit tests with LLMs at lower cost. It starts with cheaper models and moves to more expensive ones, using clustering and a stopping rule that triggers when progress plateaus. On 182 EvoEval problems, it used 67% fewer tokens than the baseline with a similar mutation score (94.3% vs. 93.7%, Wilcoxon p = 0.21).",
+      tags: ["Mutation Testing", "LLM Test Generation", "Clustering", "EvoEval"],
       links: [],
     },
   ],
