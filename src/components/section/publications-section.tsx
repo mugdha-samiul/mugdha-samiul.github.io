@@ -32,9 +32,11 @@ export default function PublicationsSection() {
           >
             <PublicationCard
               title={publication.title}
-              authors={publication.authors}
-              venue={publication.venue}
-              venueHref={publication.venueHref}
+              authors={"authors" in publication ? publication.authors : undefined}
+              venue={"venue" in publication ? publication.venue : undefined}
+              venueHref={
+                "venueHref" in publication ? publication.venueHref : undefined
+              }
               status={publication.status}
               description={publication.description}
               tags={publication.tags}
